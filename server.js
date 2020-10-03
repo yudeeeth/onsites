@@ -9,7 +9,7 @@ var password = "udith69";
 var username = "udith";
 
 app.post('/register',(request, response) =>{
-
+    console.log(request.body);
     username = request.body["username"];
     password = request.body["password"];
     console.log(username,password);
@@ -17,7 +17,7 @@ app.post('/register',(request, response) =>{
 });
 
 app.post('/login',(request, response) =>{
-    console.log(request.body);
+    //console.log(request.body);
     if(username == request.body.username && password == request.body.password)
     {console.log("cracked");
     response.send({
